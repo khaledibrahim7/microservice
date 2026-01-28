@@ -1,4 +1,4 @@
-package com.microservice.doctor.controller.service;
+package com.microservice.doctor.service;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;

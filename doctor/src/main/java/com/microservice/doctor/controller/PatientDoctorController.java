@@ -1,6 +1,6 @@
 package com.microservice.doctor.controller;
 
-import com.microservice.doctor.controller.service.DoctorPatientService;
+import com.microservice.doctor.service.DoctorPatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
