@@ -23,6 +23,4 @@ public class PatientController  {
         log.info("new request : " + UUID.randomUUID());
         return this.patientService.getName(name);
     }
-
-
 }
