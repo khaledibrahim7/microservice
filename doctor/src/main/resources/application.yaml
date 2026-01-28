@@ -1,0 +1,7 @@
+spring:
+  application:
+  name: doctor
+
+server:
+  port: 8000
+
