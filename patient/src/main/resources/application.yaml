@@ -1,6 +1,18 @@
 spring:
  application:
   name: patient
+ datasource:
+  url: jdbc:sqlserver://localhost:1433;databaseName=patient;encrypt=true;trustServerCertificate=true
+  username: hr_user
+  password: 123
+  driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+ jpa:
+  show-sql: true
+  hibernate:
+   ddl-auto: update
+  properties:
+   hibernate:
+    dialect: org.hibernate.dialect.SQLServer2012Dialect
 
  cloud:
   config:
