@@ -15,7 +15,7 @@ public class PaymentDoctorController {
 
     @Autowired
     private DoctorPaymentService paymentService;
-    @PostMapping
+    @PostMapping("/payment")
     public ResponseEntity<?> save (@RequestBody PaymentRequest request){
         return ResponseEntity.ok(this.paymentService.insert(request));
     }

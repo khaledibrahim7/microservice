@@ -7,14 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+
 @RestController
-@RequestMapping("/doctor")
+@RequestMapping("/patient")
 public class PatientDoctorController {
 
     @Autowired
     private DoctorPatientService patientService;
-
-
     @GetMapping("/get-patient")
     public String getPatient(){
         return this.patientService.getPatient("Abd");
@@ -25,7 +24,8 @@ public class PatientDoctorController {
 
         return this.patientService.getPatientByFeign(name);
     }
-    @GetMapping("/{id}")
+
+    @GetMapping("/id/{id}")
     public ResponseEntity<?> getPatientById(@PathVariable Long id){
         return  ResponseEntity.ok(this.patientService.getPatientById(id));
     }
@@ -34,7 +34,7 @@ public class PatientDoctorController {
     public ResponseEntity<?> getAll(){
         return  ResponseEntity.ok(this.patientService.getAll());
     }
-    @PostMapping
+    @PostMapping("/patient")
     public PatientResponse save(@RequestBody PatientRequest patientRequest){
           return patientService.save(patientRequest);
     }

@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/patient")
 @Slf4j
+@RequestMapping("/patient")
 @RequiredArgsConstructor
 public class PatientController  {
 
@@ -26,7 +26,7 @@ public class PatientController  {
         return ResponseEntity.ok(this.patientService.getAll());
     }
 
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     public PatientResponse getById(@PathVariable("id") Long id){
         return this.patientService.getById(id);
     }

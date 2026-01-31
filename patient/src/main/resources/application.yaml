@@ -1,6 +1,7 @@
 spring:
  application:
   name: patient
+
  datasource:
   url: jdbc:sqlserver://localhost:1433;databaseName=patient;encrypt=true;trustServerCertificate=true
   username: hr_user
@@ -22,6 +23,8 @@ spring:
 
 server:
  port: 9000
+ servlet:
+  context-path: /patient
 
 eureka:
  client:
